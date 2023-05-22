@@ -5,12 +5,12 @@ RUN bash /install-build.sh
 
 FROM node:18.16.0-slim AS PROD
 
-COPY install-prod.sh /
+RUN apt-get update && apt-get install adb make g++ python3 -y
 
 COPY --from=BUILD /ws-scrcpy/dist /dist
 
 WORKDIR /dist
-RUN bash /install-prod.sh
+RUN npm install
 
 EXPOSE 8000
 COPY entrypoint.sh ./
