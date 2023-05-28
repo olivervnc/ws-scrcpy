@@ -10,7 +10,6 @@ RUN apt-get update && apt-get install adb make g++ python3 -y
 COPY --from=BUILD /ws-scrcpy/build /dist
 
 WORKDIR /dist
-RUN npm install
 
 EXPOSE 8000
 COPY entrypoint.sh ./
