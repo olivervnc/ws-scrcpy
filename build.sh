@@ -16,7 +16,7 @@ npm install
 npm run dist
 
 esbuild dist/index.js --platform=node --target=node16 --bundle --loader:.node=file --outdir=build/ --minify
-mv dist/public dist/vendor dist/LICENCE build/
+mv dist/public dist/vendor dist/LICENSE build/
 
 mv build ../
 cd ..
