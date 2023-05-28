@@ -8,5 +8,5 @@ WORKDIR /dist
 
 EXPOSE 8000
 COPY entrypoint.sh ./
-ENTRYPOINT ["bash","entrypoint.sh"]
+ENTRYPOINT ["/bin/bash","entrypoint.sh"]
 CMD ["localhost"]
