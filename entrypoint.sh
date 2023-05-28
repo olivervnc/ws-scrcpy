@@ -5,4 +5,4 @@ do
 adb connect $addr
 done
 
-npm start
+node index.js
