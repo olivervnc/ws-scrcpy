@@ -1,6 +1,6 @@
 FROM node:18.16.0-alpine3.16
 
-RUN apk add --no-cache android-tools
+RUN apk add --no-cache android-tools bash
 
 COPY build /dist
 
