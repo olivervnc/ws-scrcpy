@@ -2,6 +2,9 @@
 
 set -e
 
+mkdir tmp
+cd tmp
+
 apt-get update && apt-get install git python3 make g++ -y
 
 cd /
@@ -14,3 +17,7 @@ npm run dist
 
 esbuild dist/index.js --platform=node --target=node16 --bundle --loader:.node=file --outdir=build/ --minify
 mv dist/public dist/vendor dist/LICENCE build/
+
+mv build ../
+cd ..
+rm -r tmp
