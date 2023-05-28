@@ -1,6 +1,6 @@
-FROM node:18.16.0-slim AS PROD
+FROM 18.16.0-alpine3.16
 
-RUN apt-get update && apt-get install adb -y
+RUN apk add --no-cache adb
 
 COPY build /dist
 
