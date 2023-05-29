@@ -1,4 +1,4 @@
-FROM node:18.16.0-alpine
+FROM node:18.16.0-alpine3.16
 
 RUN apk add --no-cache android-tools bash
 
